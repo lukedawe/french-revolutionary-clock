@@ -11,17 +11,17 @@ Fm=
 
 BlinkY=123
 
-SizeValue=0.67
+SizeValue=2
 
 
-FontFace=Niagara Solid
+FontFace=Folio-Bold
 
 ClockColor=255,140,0
 
 
 DayColor=23,129,243
 
-FontColor=255,255,255
+FontColor=5,5,5
 FontColor2=255,255,255,200
 FontColor3=191,216,242,255
 FontEffectColor=0,0,0,50
