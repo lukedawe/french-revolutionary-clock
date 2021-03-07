@@ -17,6 +17,8 @@ SizeValue=0.67
 FontFace=Niagara Solid
 
 ClockColor=255,140,0
+
+
 DayColor=23,129,243
 
 FontColor=255,255,255
