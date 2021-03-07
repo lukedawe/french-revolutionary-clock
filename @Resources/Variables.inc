@@ -2,9 +2,6 @@
 [Variables]
 
 
-LangLoc=en-US
-
-HourFormat=%H
 
 Ms=
 Fm=
@@ -22,8 +19,9 @@ ClockColor=255,140,0
 DayColor=23,129,243
 
 FontColor=5,5,5
-FontColor2=255,255,255,200
-FontColor3=191,216,242,255
+
+; FontColor2=255,255,255,200
+; FontColor3=191,216,242,255
 FontEffectColor=0,0,0,50
 
 
