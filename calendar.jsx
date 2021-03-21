@@ -56,7 +56,7 @@ export const updateState = (event, previousState) => {
     if (dayOfTheMonth == 0) {
         dayOfTheMonth = 30
     }
-    let monthNumber = Math.ceil(((dayOfyear + 102) / 30) % 13);
+    let monthNumber = Math.ceil(((dayOfyear + 101) / 30) % 13);
 
     var dayoftheweek = dayOfTheMonth % 10;
     var dayName = DAYNAMES[dayoftheweek];
