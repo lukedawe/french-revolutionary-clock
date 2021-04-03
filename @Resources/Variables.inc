@@ -1,16 +1,4 @@
 [Variables]
-BlinkY=123
-
-SizeValue=2
-
-
 FontFace=Folio-Bold
-
-ClockColor=255,140,0
-
-
-DayColor=23,129,243
-
 FontColor=5,5,5
-
 FontEffectColor=0,0,0,50
