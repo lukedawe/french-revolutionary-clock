@@ -49,7 +49,9 @@ export const render = () => {
     }
 
     let dayOfTheMonth = (date.getDay() + offset) % 30;
-    if (dayOfTheMonth == 0) dayOfTheMonth = 30;
+    if (dayOfTheMonth == 0) {
+        dayOfTheMonth = 30
+    }
     let monthNumber = Math.ceil(((dayOfyear + 102) / 30) % 13);
 
     let dayoftheweek = dayofTheMonth % 10;
