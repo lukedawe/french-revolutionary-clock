@@ -20,10 +20,10 @@ const inner = css`
 `
 
 const bottom = css`
-    margin-top: 0.1em;
+    margin-top: -0.1em;
 `
 const bigText = css`
-    font-size: 3em;
+    font-size: 3.3em;
 `
 
 const DAYNAMES = [
@@ -48,6 +48,7 @@ const getData = () => {
     } else if (dayOfyear > 259 && leapYear) {
         offset = 5;
     }
+    offset += 4;
 
     var dayOfTheMonth = (date.getDay() + offset) % 30;
 
