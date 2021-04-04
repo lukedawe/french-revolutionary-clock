@@ -56,7 +56,7 @@ const getData = () => {
     }
     var monthNumber = Math.ceil(((dayOfyear + 102) / 30) % 13);
 
-    var dayoftheweek = dayofTheMonth % 10;
+    var dayoftheweek = dayOfTheMonth % 10;
     var dayName = DAYNAMES[dayoftheweek];
     var monthName = MONTHNAMES[monthNumber]
     return {
