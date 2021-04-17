@@ -61,8 +61,8 @@ export const render = () => {
     var monthName = MONTHNAMES[monthNumber]
     // return {
     let day = dayOfTheMonth;
-    let dayName = dayName;
-    let monthName = monthNam;
+    //  dayName = dayName;
+    // let monthName = monthNam;
 
     return <div className={text}>
         <div className={wrapper}>
