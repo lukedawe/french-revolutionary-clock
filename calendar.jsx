@@ -31,7 +31,8 @@ const DAYNAMES = [
 ]
 const MONTHNAMES = ["Les jours complémentaires", "I Vendémiaire", "II Brumaire", "III Frimaire", "IV Nivôse", "V Pluviôse", "VI Ventôse", "VII Germinal", "VIII Floréal", "IX Prairial", "X Messidor", "XI Thermidor", "XII Fructidor",
 ]
-export const render = () => {
+
+export const updateState = (event, previousState) => {
     let date = new Date();
 
     let leapYear = date.getFullYear() % 4 == 0 && date.getFullYear() % 100 > 0;
@@ -59,10 +60,21 @@ export const render = () => {
     var dayoftheweek = dayOfTheMonth % 10;
     var dayName = DAYNAMES[dayoftheweek];
     var monthName = MONTHNAMES[monthNumber]
-    // return {
-    let day = dayOfTheMonth;
-    //  dayName = dayName;
-    // let monthName = monthNam;
+    return {
+        day: dayOfTheMonth,
+        dayName: dayName,
+        monthName: monthName
+    }
+}
+
+export const initialState = {
+    day: 01,
+    dayName: 'Day name',
+    monthName: 'A month'
+};
+
+
+export const render = ({ day, dayName, monthName, }) => {
 
     return <div className={text}>
         <div className={wrapper}>
