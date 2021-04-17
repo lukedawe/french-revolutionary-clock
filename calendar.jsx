@@ -49,7 +49,7 @@ export const render = () => {
     }
     // offset += 4;
 
-    var dayOfTheMonth = (date.getDay() + offset) % 30;
+    var dayOfTheMonth = (dayOfyear + offset) % 30;
 
     if (dayOfTheMonth == 0) {
         dayOfTheMonth = 30
