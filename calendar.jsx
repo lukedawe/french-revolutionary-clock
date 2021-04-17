@@ -32,7 +32,6 @@ const DAYNAMES = [
 const MONTHNAMES = ["Les jours complémentaires", "I Vendémiaire", "II Brumaire", "III Frimaire", "IV Nivôse", "V Pluviôse", "VI Ventôse", "VII Germinal", "VIII Floréal", "IX Prairial", "X Messidor", "XI Thermidor", "XII Fructidor",
 ]
 
-export const refreshFrequency = 1000;
 
 export const updateState = (event, previousState) => {
     let date = new Date();
@@ -75,6 +74,12 @@ export const initialState = {
     monthName: 'A month'
 };
 
+export const refreshFrequency = 1000;
+
+
+export const command = (dispatch) => {
+    dispatch(null, null)
+}
 
 export const render = ({ day, dayName, monthName, }) => {
 
