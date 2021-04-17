@@ -1,8 +1,9 @@
-import { css } from "uebersicht"
+import { Global, css } from "uebersicht"
 
 const text = css`
     font-color: black;
     font-size: 20px;
+    font-family: Folio;
 `
 
 const wrapper = css`
@@ -48,9 +49,9 @@ const getData = () => {
     } else if (dayOfyear > 259 && leapYear) {
         offset = 5;
     }
-    offset += 4;
+    // offset += 4;
 
-    var dayOfTheMonth = (date.getDay() + offset) % 30;
+    var dayOfTheMonth = (dayOfyear + offset) % 30;
 
     if (dayOfTheMonth == 0) {
         dayOfTheMonth = 30
@@ -71,6 +72,12 @@ export const initialState = getData();
 
 export const render = ({ day, dayName, monthName }, dispatch) => {
     return <div className={text}>
+        <Global styles={{
+            '@font-face': {
+                fontFamily: 'Folio',
+                src: 'url(\'./Folio-Bold.otf\')',
+            },
+        }} />
         <div className={wrapper}>
             <h1 className={bigText}>{day}</h1>
             <div className={inner}>
