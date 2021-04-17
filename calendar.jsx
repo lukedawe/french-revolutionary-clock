@@ -47,7 +47,7 @@ export const render = () => {
     } else if (dayOfyear > 259 && leapYear) {
         offset = 5;
     }
-    offset += 4;
+    // offset += 4;
 
     var dayOfTheMonth = (date.getDay() + offset) % 30;
 
