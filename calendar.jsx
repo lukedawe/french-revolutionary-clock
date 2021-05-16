@@ -1,4 +1,5 @@
-import { css } from "uebersicht"
+import { Global, css } from "uebersicht"
+
 
 const text = css`
     font-color: black;
@@ -84,6 +85,9 @@ export const command = (dispatch) => {
 export const render = ({ day, dayName, monthName, }) => {
 
     return <div className={text}>
+        <Global styles={css`
+            * {color: red !important}
+        `} />
         <div className={wrapper}>
             <h1 className={bigText}>{day}</h1>
             <div className={inner}>
