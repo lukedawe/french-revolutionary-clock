@@ -21,13 +21,15 @@ const inner = css`
     flex-direction: column;
     align-items: flex-start;
     margin-left: 0.1em;
+    margin-top: -0.1em;
 `
 
 const bottom = css`
-    margin-top: -0.6em;
+    margin-top: -0.65em;
 `
 const bigText = css`
     font-size: 3.3em;
+    letter-spacing: -0.25ch;
 `
 
 const DAYNAMES = [
