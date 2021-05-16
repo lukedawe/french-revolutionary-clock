@@ -24,7 +24,7 @@ const inner = css`
 `
 
 const bottom = css`
-    margin-top: -0.1em;
+    margin-top: -0.6em;
 `
 const bigText = css`
     font-size: 3.3em;
@@ -87,7 +87,7 @@ export const command = (dispatch) => {
 
 export const render = ({ day, dayName, monthName, }) => {
 
-    return <div className={text + "french-calendar"}>
+    return <div className={text}>
         <link rel="stylesheet" type="text/css" href="./calendar.css" />
         <div className={wrapper}>
             <h1 className={bigText}>{day}</h1>
