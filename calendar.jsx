@@ -1,5 +1,4 @@
-import { Global, css } from "uebersicht"
-// import font from './@Resources/Folio-Bold.otf'
+import { css } from "uebersicht"
 
 const fontStyle = css`
     *
@@ -89,11 +88,7 @@ export const command = (dispatch) => {
 export const render = ({ day, dayName, monthName, }) => {
 
     return <div className={text}>
-        <Global styles={css`
-            * {
-                color: red !important;
-            }
-        `} />
+        <link rel="stylesheet" type="text/css" href="./calendar.css" />
         <div className={wrapper}>
             <h1 className={bigText}>{day}</h1>
             <div className={inner}>
