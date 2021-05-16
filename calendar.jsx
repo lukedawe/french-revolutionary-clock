@@ -1,5 +1,5 @@
 import { Global, css } from "uebersicht"
-import font from './@Resources/Folio-Bold.otf'
+// import font from './@Resources/Folio-Bold.otf'
 
 const fontStyle = css`
     *
