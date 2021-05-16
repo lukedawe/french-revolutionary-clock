@@ -1,5 +1,9 @@
 import { Global, css } from "uebersicht"
+import font from './@Resources/Folio-Bold.otf'
 
+const fontStyle = css`
+    *
+`
 
 const text = css`
     font-color: black;
@@ -86,7 +90,9 @@ export const render = ({ day, dayName, monthName, }) => {
 
     return <div className={text}>
         <Global styles={css`
-            * {color: red !important}
+            * {
+                color: red !important;
+            }
         `} />
         <div className={wrapper}>
             <h1 className={bigText}>{day}</h1>
