@@ -4,7 +4,8 @@
     font-weight: bold;
 }
 
-* {
+.french-calendar,
+.french-calendar * {
     font-family: "Folio", sans-serif !important;
     font-weight: bold;
 }

@@ -87,7 +87,7 @@ export const command = (dispatch) => {
 
 export const render = ({ day, dayName, monthName, }) => {
 
-    return <div className={text}>
+    return <div className={text + "french-calendar"}>
         <link rel="stylesheet" type="text/css" href="./calendar.css" />
         <div className={wrapper}>
             <h1 className={bigText}>{day}</h1>
