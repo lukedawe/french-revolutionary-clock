@@ -20,7 +20,7 @@ const inner = css`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-left: 0.1em;
+    margin-left: 0.25em;
     margin-top: -0.1em;
 `
 
@@ -29,8 +29,8 @@ const bottom = css`
 `
 const bigText = css`
     font-size: 3.3em;
-    letter-spacing: -0.25ch;
-`
+`    // letter-spacing: -0.1ch;
+
 
 const DAYNAMES = [
     "Décadi", "Primidi", "Duodi", "Tridi", "Quartidi", "Quintidi", "Sextidi", "Septidi", "Octidi", "Nonidi"
