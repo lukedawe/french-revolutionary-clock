@@ -21,7 +21,7 @@ const inner = css`
     flex-direction: column;
     align-items: flex-start;
     margin-left: 0.4em;
-    margin-top: -0.2em;
+    margin-top: -0.3em;
 `
 
 const bottom = css`
