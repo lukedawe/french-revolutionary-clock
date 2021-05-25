@@ -21,11 +21,11 @@ const inner = css`
     flex-direction: column;
     align-items: flex-start;
     margin-left: 0.25em;
-    margin-top: -0.1em;
+    margin-top: -0.15em;
 `
 
 const bottom = css`
-    margin-top: -0.65em;
+    margin-top: -0.7em;
 `
 const bigText = css`
     font-size: 3.3em;
