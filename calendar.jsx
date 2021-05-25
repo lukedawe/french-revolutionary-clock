@@ -14,7 +14,7 @@ const wrapper = css`
     flex-direction: row;
     align-items: center;
     margin-left: 0.5em;
-    margin-top: -1em;
+    margin-top: -2em;
 `
 
 const inner = css`
