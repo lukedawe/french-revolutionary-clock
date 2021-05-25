@@ -20,8 +20,8 @@ const inner = css`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-left: 0.25em;
-    margin-top: -0.15em;
+    margin-left: 0.4em;
+    margin-top: -0.2em;
 `
 
 const bottom = css`
