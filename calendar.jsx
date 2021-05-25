@@ -6,7 +6,7 @@ const fontStyle = css`
 
 const text = css`
     font-color: black;
-    font-size: 20px;
+    font-size: 30px;
 `
 
 const wrapper = css`
