@@ -13,6 +13,8 @@ const wrapper = css`
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-left: 0.5em;
+    margin-top: -1em;
 `
 
 const inner = css`
