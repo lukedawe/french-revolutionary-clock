@@ -7,7 +7,7 @@ const fontStyle = css`
 const menu = css`
     position: absolute;
     visibility: hidden;
-    margin: '2em';
+    margin: 2em;
     `;
 // display: none;
 
