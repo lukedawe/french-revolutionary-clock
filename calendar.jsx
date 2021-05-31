@@ -126,7 +126,7 @@ export const render = ({ day, dayName, monthName, }) => {
 
     const hideMenu = () => {
         let menu = document.getElementById("menu");
-        menu.style.visibility = 'collapsed';
+        menu.style.visibility = 'hidden';
         // menu.style.visibility = '';
     }
 
