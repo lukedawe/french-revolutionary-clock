@@ -21,6 +21,8 @@ const text = css`
     position: absolute;
     top: 0;
     left: 0;
+    margin-top: 2vh;
+    margin-left: 2vw;
     `
     // width: 500px;
 
@@ -133,7 +135,7 @@ export const render = ({ day, dayName, monthName, }) => {
     }
     const moveToBottomLeft = (e) => {
         let calendar = document.getElementById("calendar");
-        calendar.style.marginTop = '80vh';
+        calendar.style.marginTop = '70vh';
         calendar.style.marginLeft = '2vw';
         hideMenu();
     }
@@ -145,7 +147,7 @@ export const render = ({ day, dayName, monthName, }) => {
     }
     const moveToBottomRight = (e) => {
         let calendar = document.getElementById("calendar");
-        calendar.style.marginTop = '80vh';
+        calendar.style.marginTop = '70vh';
         calendar.style.marginLeft = '80vw';
         hideMenu();
     }
