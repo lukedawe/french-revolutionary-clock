@@ -109,8 +109,8 @@ export const command = (dispatch) => {
 export const render = ({ day, dayName, monthName, }) => {
     const openContextMenu = (e) => {
         let menu = document.getElementById("menu");
-        menu.style.top = e.clientY;
-        menu.style.left = e.clientX;
+        menu.style.top = e.pageY;
+        menu.style.left = e.pageX;
         menu.style.visibility = 'visible';
     }
 
