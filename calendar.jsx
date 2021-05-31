@@ -4,7 +4,7 @@ const fontStyle = css`
     *
 `
 
-const wrapper = css`
+const wrapper2 = css`
     width: 500px;
 `;
 
@@ -16,7 +16,7 @@ const menu = css`
 // display: none;
 
 const text = css`
-    font-color: black;
+    color: black;
     font-size: 30px;
     position: absolute;
     top: 0;
@@ -152,7 +152,12 @@ export const render = ({ day, dayName, monthName, }) => {
         hideMenu();
     }
 
-    return <div className={wrapper}>
+    const changeToWhite = (toWhite) => () => {
+        let calendar = document.getElementById("calendar");
+        calendar.style.color = toWhite ? 'white' : 'black';
+    } 
+
+    return <div className={wrapper2}>
         <div className={text} id="calendar"
             onContextMenu={openContextMenu}
         // onClick={openContextMenu}
@@ -171,6 +176,8 @@ export const render = ({ day, dayName, monthName, }) => {
             <button className={button} onClick={moveToBottomLeft}>Move To Bottom Left</button>
             <button className={button} onClick={moveToTopRight}>Move To Top Right</button>
             <button className={button} onClick={moveToBottomRight}>Move To Bottom Right</button>
+            <button className={button} onClick={changeToWhite(true)}>Change to white</button>
+            <button className={button} onClick={changeToWhite(false)}>Change to black</button>
         </div>
     </div>
 }
