@@ -30,8 +30,9 @@ const bottom = css`
     margin-top: -0.7em;
 `
 const bigText = css`
+    letter-spacing: -0.1ch;
     font-size: 3.3em;
-`    // letter-spacing: -0.1ch;
+    `
 
 
 const DAYNAMES = [
@@ -91,7 +92,13 @@ export const command = (dispatch) => {
 
 export const render = ({ day, dayName, monthName, }) => {
 
-    return <div className={text}>
+    return <div className={text} id="calendar" onContextMenu={(e) => {
+        document.getElementById("calendar").style.marginTop = '50em';
+    }}
+        onClick={(e) => {
+            document.getElementById("calendar").style.marginTop = '50em';
+        }}
+    >
         <link rel="stylesheet" type="text/css" href="./calendar.css" />
         <div className={wrapper}>
             <h1 className={bigText}>{day}</h1>
