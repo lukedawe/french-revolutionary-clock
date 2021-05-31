@@ -17,6 +17,7 @@ const text = css`
     position: absolute;
     top: 0;
     left: 0;
+    width: 500px;
 `
 
 const wrapper = css`
@@ -116,6 +117,7 @@ export const render = ({ day, dayName, monthName, }) => {
 
     const hideMenu = () => {
         menu.style.visibility = 'hidden';
+        menu.style.visibility = '';
     }
 
     const moveToTopLeft = (e) => {
@@ -134,13 +136,13 @@ export const render = ({ day, dayName, monthName, }) => {
     const moveToTopRight = (e) => {
         let calendar = document.getElementById("calendar");
         calendar.style.marginTop = '2vh';
-        calendar.style.marginLeft = '70vw';
+        calendar.style.marginLeft = '80vw';
         hideMenu();
     }
     const moveToBottomRight = (e) => {
         let calendar = document.getElementById("calendar");
         calendar.style.marginTop = '80vh';
-        calendar.style.marginLeft = '70vw';
+        calendar.style.marginLeft = '80vw';
         hideMenu();
     }
 
@@ -153,8 +155,8 @@ export const render = ({ day, dayName, monthName, }) => {
             <div className={wrapper}>
                 <h1 className={bigText}>{day}</h1>
                 <div className={inner}>
-                    <span>{dayName}</span>
-                    <span className={bottom}>{monthName}</span>
+                    <p>{dayName}</p>
+                    <p className={bottom}>{monthName}</p>
                 </div>
             </div>
         </div>
