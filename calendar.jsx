@@ -7,6 +7,9 @@ const fontStyle = css`
 const text = css`
     font-color: black;
     font-size: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
 `
 
 const wrapper = css`
@@ -90,22 +93,43 @@ export const command = (dispatch) => {
     dispatch(null, null)
 }
 
+
+const openContextMenu = (e) => {
+    const menu = document.getElementById("menu");
+    menu.style.top = e.clientY;
+    menu.style.left = e.clientX;
+    menu.style.visibility = 'visible';
+}
+
+const moveToTopLeft = (e) => {
+    const calendar = document.getElementById("calendar");
+    calendar.style.top = 0;
+    calendar.style.left = 0;
+}
+const moveToBottomLeft = (e) => {
+    const calendar = document.getElementById("calendar");
+    calendar.style.bottom = 0;
+    calendar.style.left = 0;
+}
+
 export const render = ({ day, dayName, monthName, }) => {
 
-    return <div className={text} id="calendar" onContextMenu={(e) => {
-        document.getElementById("calendar").style.marginTop = '50em';
-    }}
-        onClick={(e) => {
-            document.getElementById("calendar").style.marginTop = '50em';
-        }}
-    >
-        <link rel="stylesheet" type="text/css" href="./calendar.css" />
-        <div className={wrapper}>
-            <h1 className={bigText}>{day}</h1>
-            <div className={inner}>
-                <p>{dayName}</p>
-                <p className={bottom}>{monthName}</p>
+    return <div>
+        <div className={text} id="calendar" onContextMenu={openContextMenu}
+            onClick={openContextMenu}
+        >
+            <link rel="stylesheet" type="text/css" href="./calendar.css" />
+            <div className={wrapper}>
+                <h1 className={bigText}>{day}</h1>
+                <div className={inner}>
+                    <p>{dayName}</p>
+                    <p className={bottom}>{monthName}</p>
+                </div>
             </div>
+        </div>
+        <div className="menu">
+            <button onClick={moveToTopLeft}>Move To Top Left</button>
+            <button onClick={moveToBottomLeft}>Move To Bottom Left</button>
         </div>
     </div>
 }
