@@ -120,12 +120,13 @@ export const render = ({ day, dayName, monthName, }) => {
         let calendar = document.getElementById("calendar");
         // calendar.style.bottom = 0;
         // calendar.style.left = 0;
-        calendar.style.marginTop = '95vh';
+        calendar.style.marginTop = '90vh';
     }
 
     return <div>
-        <div className={text} id="calendar" onContextMenu={openContextMenu}
-            onClick={openContextMenu}
+        <div className={text} id="calendar" 
+            onContextMenu={openContextMenu}
+            // onClick={openContextMenu}
         >
             <link rel="stylesheet" type="text/css" href="./calendar.css" />
             <div className={wrapper}>
