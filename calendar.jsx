@@ -126,7 +126,7 @@ export const render = ({ day, dayName, monthName, }) => {
 
     const hideMenu = () => {
         menu.style.visibility = 'hidden';
-        menu.style.visibility = '';
+        // menu.style.visibility = '';
     }
 
     const moveToTopLeft = (e) => {
