@@ -50,6 +50,10 @@ const DAYNAMES = [
 const MONTHNAMES = ["Les jours complémentaires", "I Vendémiaire", "II Brumaire", "III Frimaire", "IV Nivôse", "V Pluviôse", "VI Ventôse", "VII Germinal", "VIII Floréal", "IX Prairial", "X Messidor", "XI Thermidor", "XII Fructidor",
 ]
 
+const button = css`
+    width: max-content;
+`;
+
 
 export const updateState = (event, previousState) => {
     let date = new Date();
@@ -109,37 +113,55 @@ export const render = ({ day, dayName, monthName, }) => {
         menu.style.visibility = 'visible';
     }
 
+    const hideMenu = () => {
+        menu.style.visibility = 'hidden';
+    }
+
     const moveToTopLeft = (e) => {
         let calendar = document.getElementById("calendar");
-        calendar.style.top = 0;
-        calendar.style.left = 0;
         calendar.style.marginTop = '2vh';
+        calendar.style.marginLeft = '2vw';
+        hideMenu();
 
     }
     const moveToBottomLeft = (e) => {
         let calendar = document.getElementById("calendar");
-        // calendar.style.bottom = 0;
-        // calendar.style.left = 0;
-        calendar.style.marginTop = '90vh';
+        calendar.style.marginTop = '80vh';
+        calendar.style.marginLeft = '2vw';
+        hideMenu();
+    }
+    const moveToTopRight = (e) => {
+        let calendar = document.getElementById("calendar");
+        calendar.style.marginTop = '2vh';
+        calendar.style.marginLeft = '70vw';
+        hideMenu();
+    }
+    const moveToBottomRight = (e) => {
+        let calendar = document.getElementById("calendar");
+        calendar.style.marginTop = '80vh';
+        calendar.style.marginLeft = '70vw';
+        hideMenu();
     }
 
     return <div>
-        <div className={text} id="calendar" 
+        <div className={text} id="calendar"
             onContextMenu={openContextMenu}
-            // onClick={openContextMenu}
+        // onClick={openContextMenu}
         >
             <link rel="stylesheet" type="text/css" href="./calendar.css" />
             <div className={wrapper}>
                 <h1 className={bigText}>{day}</h1>
                 <div className={inner}>
-                    <p>{dayName}</p>
-                    <p className={bottom}>{monthName}</p>
+                    <span>{dayName}</span>
+                    <span className={bottom}>{monthName}</span>
                 </div>
             </div>
         </div>
         <div id="menu" className="menu" className={menu} >
-            <button onClick={moveToTopLeft}>Move To Top Left</button>
-            <button onClick={moveToBottomLeft}>Move To Bottom Left</button>
+            <button className={button} onClick={moveToTopLeft}>Move To Top Left</button>
+            <button className={button} onClick={moveToBottomLeft}>Move To Bottom Left</button>
+            <button className={button} onClick={moveToTopRight}>Move To Top Right</button>
+            <button className={button} onClick={moveToBottomRight}>Move To Bottom Right</button>
         </div>
     </div>
 }
