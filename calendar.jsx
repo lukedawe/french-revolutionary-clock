@@ -123,7 +123,7 @@ export const render = ({ day, dayName, monthName, }) => {
         calendar.style.marginTop = '90vh';
     }
 
-    return <>
+    return <div>
         <div className={text} id="calendar" 
             onContextMenu={openContextMenu}
             // onClick={openContextMenu}
@@ -141,7 +141,7 @@ export const render = ({ day, dayName, monthName, }) => {
             <button onClick={moveToTopLeft}>Move To Top Left</button>
             <button onClick={moveToBottomLeft}>Move To Bottom Left</button>
         </div>
-    </>
+    </div>
 }
 
 
