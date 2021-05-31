@@ -4,6 +4,10 @@ const fontStyle = css`
     *
 `
 
+const menu = css`
+    visibility: 'hidden';
+`;
+
 const text = css`
     font-color: black;
     font-size: 30px;
@@ -94,25 +98,25 @@ export const command = (dispatch) => {
 }
 
 
-const openContextMenu = (e) => {
-    const menu = document.getElementById("menu");
-    menu.style.top = e.clientY;
-    menu.style.left = e.clientX;
-    menu.style.visibility = 'visible';
-}
-
-const moveToTopLeft = (e) => {
-    const calendar = document.getElementById("calendar");
-    calendar.style.top = 0;
-    calendar.style.left = 0;
-}
-const moveToBottomLeft = (e) => {
-    const calendar = document.getElementById("calendar");
-    calendar.style.bottom = 0;
-    calendar.style.left = 0;
-}
 
 export const render = ({ day, dayName, monthName, }) => {
+    const openContextMenu = (e) => {
+        let menu = document.getElementById("menu");
+        menu.style.top = e.clientY;
+        menu.style.left = e.clientX;
+        menu.style.visibility = 'visible';
+    }
+
+    const moveToTopLeft = (e) => {
+        let calendar = document.getElementById("calendar");
+        calendar.style.top = 0;
+        calendar.style.left = 0;
+    }
+    const moveToBottomLeft = (e) => {
+        let calendar = document.getElementById("calendar");
+        calendar.style.bottom = 0;
+        calendar.style.left = 0;
+    }
 
     return <div>
         <div className={text} id="calendar" onContextMenu={openContextMenu}
@@ -127,7 +131,7 @@ export const render = ({ day, dayName, monthName, }) => {
                 </div>
             </div>
         </div>
-        <div className="menu">
+        <div className="menu" className={menu} >
             <button onClick={moveToTopLeft}>Move To Top Left</button>
             <button onClick={moveToBottomLeft}>Move To Bottom Left</button>
         </div>
