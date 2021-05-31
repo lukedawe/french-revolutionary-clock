@@ -126,7 +126,7 @@ export const render = ({ day, dayName, monthName, }) => {
 
     const hideMenu = () => {
         let menu = document.getElementById("menu");
-        menu.style.visibility = 'hidden';
+        menu.style.visibility = 'collapsed';
         // menu.style.visibility = '';
     }
 
@@ -159,6 +159,8 @@ export const render = ({ day, dayName, monthName, }) => {
     const changeToWhite = (toWhite) => () => {
         let calendar = document.getElementById("calendar");
         calendar.style.color = toWhite ? 'white' : 'black';
+        hideMenu();
+
     } 
 
     return <div className={wrapper2}>
