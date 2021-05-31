@@ -4,6 +4,10 @@ const fontStyle = css`
     *
 `
 
+const wrapper = css`
+    width: 500px;
+`;
+
 const menu = css`
     position: absolute;
     visibility: hidden;
@@ -146,7 +150,7 @@ export const render = ({ day, dayName, monthName, }) => {
         hideMenu();
     }
 
-    return <div>
+    return <div className={wrapper}>
         <div className={text} id="calendar"
             onContextMenu={openContextMenu}
         // onClick={openContextMenu}
