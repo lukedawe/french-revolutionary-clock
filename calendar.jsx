@@ -12,6 +12,9 @@ const menu = css`
     position: absolute;
     visibility: hidden;
     margin: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     `;
 // display: none;
 
@@ -142,13 +145,13 @@ export const render = ({ day, dayName, monthName, }) => {
     const moveToTopRight = (e) => {
         let calendar = document.getElementById("calendar");
         calendar.style.marginTop = '2vh';
-        calendar.style.marginLeft = '80vw';
+        calendar.style.marginLeft = '75vw';
         hideMenu();
     }
     const moveToBottomRight = (e) => {
         let calendar = document.getElementById("calendar");
         calendar.style.marginTop = '70vh';
-        calendar.style.marginLeft = '80vw';
+        calendar.style.marginLeft = '75vw';
         hideMenu();
     }
 
