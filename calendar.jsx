@@ -26,8 +26,8 @@ const text = css`
     left: 0;
     margin-top: 2vh;
     margin-left: 2vw;
+    width: 500px;
     `
-    // width: 500px;
 
 const wrapper = css`
     display: flex;
