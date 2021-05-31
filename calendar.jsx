@@ -21,8 +21,8 @@ const text = css`
     position: absolute;
     top: 0;
     left: 0;
-    width: 500px;
-`
+    `
+    // width: 500px;
 
 const wrapper = css`
     display: flex;
