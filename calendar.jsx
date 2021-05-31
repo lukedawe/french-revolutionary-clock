@@ -5,8 +5,10 @@ const fontStyle = css`
 `
 
 const menu = css`
-    visibility: 'hidden';
-`;
+    position: absolute;
+    visibility: hidden;
+    `;
+// display: none;
 
 const text = css`
     font-color: black;
@@ -111,11 +113,14 @@ export const render = ({ day, dayName, monthName, }) => {
         let calendar = document.getElementById("calendar");
         calendar.style.top = 0;
         calendar.style.left = 0;
+        calendar.style.marginTop = '2vh';
+
     }
     const moveToBottomLeft = (e) => {
         let calendar = document.getElementById("calendar");
-        calendar.style.bottom = 0;
-        calendar.style.left = 0;
+        // calendar.style.bottom = 0;
+        // calendar.style.left = 0;
+        calendar.style.marginTop = '95vh';
     }
 
     return <div>
@@ -131,7 +136,7 @@ export const render = ({ day, dayName, monthName, }) => {
                 </div>
             </div>
         </div>
-        <div className="menu" className={menu} >
+        <div id="menu" className="menu" className={menu} >
             <button onClick={moveToTopLeft}>Move To Top Left</button>
             <button onClick={moveToBottomLeft}>Move To Bottom Left</button>
         </div>
