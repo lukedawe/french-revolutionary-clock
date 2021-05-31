@@ -150,7 +150,7 @@ export const render = ({ day, dayName, monthName, }) => {
         hideMenu();
     }
     const moveToBottomRight = (e) => {
-        let calendar = document.getElementById("calendar");
+        let calendar = document.getElementById("calendar"); 
         calendar.style.marginTop = '73vh';
         calendar.style.marginLeft = '75vw';
         hideMenu();
