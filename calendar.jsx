@@ -138,7 +138,7 @@ export const render = ({ day, dayName, monthName, }) => {
     }
     const moveToBottomLeft = (e) => {
         let calendar = document.getElementById("calendar");
-        calendar.style.marginTop = '70vh';
+        calendar.style.marginTop = '73vh';
         calendar.style.marginLeft = '2vw';
         hideMenu();
     }
@@ -150,7 +150,7 @@ export const render = ({ day, dayName, monthName, }) => {
     }
     const moveToBottomRight = (e) => {
         let calendar = document.getElementById("calendar");
-        calendar.style.marginTop = '70vh';
+        calendar.style.marginTop = '73vh';
         calendar.style.marginLeft = '75vw';
         hideMenu();
     }
